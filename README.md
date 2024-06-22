@@ -1,6 +1,14 @@
 
 # ObjectRecord
 
+### In this README:
+
+- [Overview](#overview) provides a brief description of what the project does.
+- [Features](#features) lists the functionalities of the `ObjectRecord` class.
+- [Usage](#usage) section demonstrates how to use the `saveObject` and `getObject` methods.
+- [Example](#example) section gives a sample code snippet demonstrating usage and exception handling.
+- [Author](#author) credits the author of the code.
+
 ## Overview
 
 The ObjectRecord class is a utility in Java for saving objects to files and restoring them during runtime. This allows any Serializable object to be serialized and stored in a file, and later deserialized to recreate the object in memory.
@@ -52,11 +60,3 @@ public static void main(String[] args) {
 ```
 ###  Author
 Author: Çağan Durgun
-
-### In this README:
-
-- [Overview](#overview) provides a brief description of what the project does.
-- [Features](#features) lists the functionalities of the `ObjectRecord` class.
-- [Usage](#usage) section demonstrates how to use the `saveObject` and `getObject` methods.
-- [Example](#example) section gives a sample code snippet demonstrating usage and exception handling.
-- [Author](#author) credits the author of the code.
