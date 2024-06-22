@@ -18,7 +18,7 @@ The ObjectRecord class is a utility in Java for saving objects to files and rest
 
 ### Usage
 #### Example of Creating a Suitable Object
-If an object is not Serializable, a NotSerializableException is thrown, providing a descriptive message that indicates the class name responsible for the issue.
+If an object is not Serializable, the registration process cannot proceed successfully. Therefore, a NotSerializableException is thrown to ensure robust and reliable system operation, providing a descriptive message that indicates the class responsible for the issue. To avoid this situation, the only requirement is to implement the Serializable interface for the class you intend to register. Below, you can see an example of its usage in a simple class.
 
 ```java
 import java.io.Serializable;
@@ -35,7 +35,7 @@ public class Car implements Serializable {
 ```
 
 #### Saving an Object
-To save an object to a file:
+The saving process for the Car class, as defined above and implementing the Serializable interface, can be performed simply as follows.
 
 ```java
 Car car = new Car("Opel", "White");
@@ -48,7 +48,7 @@ try {
 ```
 
 #### Restoring an Object
-To restore an object from a file:
+Similarly, restoring operations can be done simply as follows, just like saving processes.
 
 ```java
 Car car;
