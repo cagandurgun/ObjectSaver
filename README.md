@@ -53,11 +53,6 @@ public static void main(String[] args) {
 ###  Author
 Author: Çağan Durgun
 
-### License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
-
 ### In this README:
 
 - **Overview** provides a brief description of what the project does.
@@ -65,4 +60,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **Usage** section demonstrates how to use the `saveObject` and `getObject` methods.
 - **Example** section gives a sample code snippet demonstrating usage and exception handling.
 - **Author** credits the author of the code.
-- **License** mentions the project's licensing information. Adjust the license details (`LICENSE` file) according to your project's actual license.
