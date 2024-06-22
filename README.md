@@ -55,8 +55,8 @@ Author: Çağan Durgun
 
 ### In this README:
 
-- **Overview** provides a brief description of what the project does.
-- **Features** lists the functionalities of the `ObjectRecord` class.
-- **Usage** section demonstrates how to use the `saveObject` and `getObject` methods.
-- **Example** section gives a sample code snippet demonstrating usage and exception handling.
-- **Author** credits the author of the code.
+- [Overview](#overview) provides a brief description of what the project does.
+- [Features](#features) lists the functionalities of the `ObjectRecord` class.
+- [Usage](#usage) section demonstrates how to use the `saveObject` and `getObject` methods.
+- [Example](#example) section gives a sample code snippet demonstrating usage and exception handling.
+- [Author](#author) credits the author of the code.
