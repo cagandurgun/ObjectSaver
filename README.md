@@ -1,4 +1,4 @@
-
+_
 # ObjectRecord
 
 ### In this README:
@@ -6,7 +6,6 @@
 - [Overview](#overview) provides a brief description of what the project does.
 - [Features](#features) lists the functionalities of the `ObjectRecord` class.
 - [Usage](#usage) section demonstrates how to use the `saveObject` and `getObject` methods.
-- [Example](#example) section gives a sample code snippet demonstrating usage and exception handling.
 - [Author](#author) credits the author of the code.
 
 ## Overview
@@ -21,42 +20,51 @@ The ObjectRecord class is a utility in Java for saving objects to files and rest
 - **Usage**: Provides simple methods `saveObject` and `getObject` to interact with serialized files.
 
 ## Usage
+### Example of Creating a Suitable Object
+If an object is not Serializable, a NotSerializableException is thrown, providing a descriptive message that indicates the class name responsible for the issue.
+
+```java
+import java.io.Serializable;
+
+public class Car implements Serializable {
+    String name;
+    String color;
+
+    public Car(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
+}
+```
 
 ### Saving an Object
-
 To save an object to a file:
 
 ```java
-Object object = ...; // your object to save
-String fileName = "file.path"; // path to the file
-new ObjectRecord().saveObject(object, fileName);
+Car car = new Car("Opel", "White");
+String fileName = "file.path";
+try {
+    new ObjectRecord().saveObject(car, fileName);
+} catch (NotSerializableException e) {
+    throw new RuntimeException(e);
+}
 ```
+
 ### Restoring an Object
 To restore an object from a file:
 
 ```java
-String fileName = "file.path"; // path to the saved file
-Object object = new ObjectRecord().getObject(fileName);
-```
-
-### Exception Handling
-If an object is not Serializable, a NotSerializableException is thrown with a descriptive message indicating the class name that caused the issue.
-
-```java
-public static void main(String[] args) {
-    try {
-        // Saving an object
-        Object objectToSave = new MySerializableObject();
-        String fileName = "saved_object.dat";
-        new ObjectRecord().saveObject(objectToSave, fileName);
-
-        // Retrieving the object
-        Object retrievedObject = new ObjectRecord().getObject(fileName);
-        System.out.println("Object retrieved: " + retrievedObject);
-    } catch (NotSerializableException e) {
-        System.err.println("Object could not be saved or retrieved: " + e.getMessage());
-    }
+Car car;
+String fileName = "file.path";
+try {
+    car = (Car) new ObjectRecord().getObject(fileName);
+} catch (NotSerializableException e) {
+    throw new RuntimeException(e);
 }
+
+System.out.println(car.name);
+System.out.println(car.color);
 ```
-###  Author
+##  Author
 Author: Çağan Durgun
+_
